@@ -10,12 +10,12 @@
 }
 
 :root {
-  --blue: #1f3864;
-  --blue-dark: #142846;
-  --orange: #e8720c;
-  --orange-dark: #c85e06;
-  --light-bg: #f4f7fb;
-  --border: #dfe5ec;
+  --blue: #1f645e;
+  --blue-dark: #144640;
+  --orange: #d20ce8;
+  --orange-dark: #c80694;
+  --light-bg: #fbf4f9;
+  --border: #ecdfe6;
   --text: #2a2a2a;
   --white: #ffffff;
   --max-width: 1100px;
