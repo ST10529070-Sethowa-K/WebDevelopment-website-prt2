@@ -64,28 +64,49 @@
 
     <section class="section-alt">
       <h2>Send Us a Message</h2>
-      <form id="contact-form" data-validate novalidate>
+      <form id="contact-form" novalidate>
         <div>
           <label for="c-fullname">Full Name</label>
-          <input type="text" id="c-fullname" name="fullname" required>
-          <div class="error" id="c-fullname-error"></div>
+          <input type="text" id="c-fullname" name="fullname" required minlength="2" maxlength="60" autocomplete="name">
+          <div class="error" id="c-fullname-error" aria-live="polite"></div>
         </div>
 
         <div>
           <label for="c-email">Email Address</label>
-          <input type="email" id="c-email" name="email" required>
-          <div class="error" id="c-email-error"></div>
+          <input type="email" id="c-email" name="email" required autocomplete="email">
+          <div class="error" id="c-email-error" aria-live="polite"></div>
         </div>
 
         <div>
-          <label for="c-message">Message</label>
-          <textarea id="c-message" name="message" required></textarea>
-          <div class="error" id="c-message-error"></div>
+          <label for="c-phone">Phone Number (optional)</label>
+          <input type="tel" id="c-phone" name="phone" maxlength="16" placeholder="e.g. 082 123 4567" autocomplete="tel">
+          <div class="error" id="c-phone-error" aria-live="polite"></div>
+        </div>
+
+        <div>
+          <label for="c-type">Type of message</label>
+          <select id="c-type" name="type" required>
+            <option value="">-- Please select --</option>
+            <option value="General enquiry">General enquiry</option>
+            <option value="Donation question">Donation question</option>
+            <option value="Partnership">Partnership</option>
+            <option value="Media request">Media request</option>
+            <option value="Feedback">Feedback</option>
+          </select>
+          <div class="error" id="c-type-error" aria-live="polite"></div>
+        </div>
+
+        <div>
+          <label for="c-message">Message (10 to 500 characters)</label>
+          <textarea id="c-message" name="message" required minlength="10" maxlength="500"></textarea>
+          <div class="error" id="c-message-error" aria-live="polite"></div>
         </div>
 
         <button type="submit" class="btn">Send Message</button>
-        <p id="form-status"></p>
+        <p id="form-status" aria-live="polite"></p>
       </form>
+
+      <div id="contact-preview" class="response" hidden></div>
     </section>
   </main>
 
@@ -95,5 +116,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
 </body>
 </html>

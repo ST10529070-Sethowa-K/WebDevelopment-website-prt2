@@ -561,3 +561,8 @@ img {
 .response ul {
   margin-left: 1.2rem;
 }
+.response pre {
+  white-space: pre-wrap;
+  font-family: inherit;
+  margin-top: 8px;
+}

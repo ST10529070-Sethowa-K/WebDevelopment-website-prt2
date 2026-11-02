@@ -133,7 +133,70 @@ function showEnquiryResponse(box, info, name) {
   box.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
+// ---------- Contact form (compiles an email) ----------
+// Check this address on the organisation's Contact page and
+// change it if it is different. Use your own address to test.
+const RECIPIENT = "info@giftofthegivers.org";
+
+function setupContactForm(form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    clearErrors(form);
+
+    let valid = validateCommonFields("c-");
+    const type = document.getElementById("c-type").value;
+    if (!type) {
+      showError("c-type", "Please choose the type of message.");
+      valid = false;
+    }
+
+    const preview = document.getElementById("contact-preview");
+    preview.hidden = true;
+
+    if (!valid) {
+      setStatus(form, "Please correct the highlighted fields above.", true);
+      return;
+    }
+
+    const name = document.getElementById("c-fullname").value.trim();
+    const email = document.getElementById("c-email").value.trim();
+    const phone = document.getElementById("c-phone").value.trim() || "Not provided";
+    const message = document.getElementById("c-message").value.trim();
+
+    // Compile the validated information into an email
+    const subject = "[" + type + "] Message from " + name;
+    const body =
+      "Name: " + name + "\n" +
+      "Email: " + email + "\n" +
+      "Phone: " + phone + "\n" +
+      "Type of message: " + type + "\n\n" +
+      "Message:\n" + message;
+
+    // Show the compiled email on the page
+    preview.replaceChildren();
+    const heading = document.createElement("h3");
+    heading.textContent = "Your email is ready to send";
+    const to = document.createElement("p");
+    to.textContent = "To: " + RECIPIENT + "  |  Subject: " + subject;
+    const pre = document.createElement("pre");
+    pre.textContent = body;
+    preview.append(heading, to, pre);
+    preview.hidden = false;
+
+    setStatus(form, "Opening your email app so you can send the message...", false);
+
+    // Open the visitor's email app with everything filled in
+    window.location.href =
+      "mailto:" + RECIPIENT +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const enquiryForm = document.getElementById("enquiry-form");
   if (enquiryForm) setupEnquiryForm(enquiryForm);
+
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) setupContactForm(contactForm);
 });
