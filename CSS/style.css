@@ -566,3 +566,27 @@ img {
   font-family: inherit;
   margin-top: 8px;
 }
+/* Services search and filter */
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  max-width: 800px;
+  margin: 24px auto 0;
+}
+
+#services-count {
+  text-align: center;
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+.card .tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  background: var(--light-bg);
+  color: var(--blue);
+  padding: 2px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}

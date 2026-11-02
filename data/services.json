@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Disaster Response",
+    "category": "Emergency",
+    "description": "Search and rescue teams, medical personnel, and emergency supplies deployed rapidly to disaster-affected areas."
+  },
+  {
+    "name": "Primary Healthcare",
+    "category": "Health",
+    "description": "Establishment of primary healthcare clinics and medical support to hospitals in under-resourced communities."
+  },
+  {
+    "name": "Water Provision",
+    "category": "Water",
+    "description": "Water purification and borehole projects to provide clean, sustainable water access to communities in need."
+  },
+  {
+    "name": "Feeding Schemes",
+    "category": "Food",
+    "description": "Food parcel distribution and feeding schemes supporting families facing hunger and food insecurity."
+  },
+  {
+    "name": "Education Support",
+    "category": "Education",
+    "description": "Bursaries, school supplies, and educational programmes helping learners stay in school and succeed."
+  },
+  {
+    "name": "Job Creation & Skills Development",
+    "category": "Livelihoods",
+    "description": "Entrepreneurship support and skills development programmes to help communities become self-sufficient."
+  }
+]
