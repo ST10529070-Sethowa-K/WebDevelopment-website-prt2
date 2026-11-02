@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://st10529070-sethowa-k.github.io/WebDevelopment-website-prt2/sitemap.xml
