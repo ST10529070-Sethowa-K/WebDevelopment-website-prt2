@@ -1,4 +1,3 @@
-# Gift of the Givers Foundation — Website Project (WEDE5020 POE)
 
 ## Student Information
 - **Full Name:** Koketso Sethowa
