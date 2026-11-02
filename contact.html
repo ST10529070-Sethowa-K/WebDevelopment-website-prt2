@@ -6,6 +6,7 @@
   <title>Contact Us | Gift of the Givers Foundation</title>
   <meta name="description" content="Contact Gift of the Givers Foundation offices in Pietermaritzburg and Johannesburg, or send us a message directly.">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
 
@@ -23,6 +24,7 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="enquiry.html">Enquiry</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
         </ul>
       </nav>
     </div>
@@ -109,13 +111,21 @@
       <div id="contact-preview" class="response" hidden></div>
     </section>
   </main>
+  <section aria-labelledby="map-heading">
+  <h2 id="map-heading">Find our offices</h2>
+  <p>Select a marker to see the office details.</p>
+  <div id="map" role="region" aria-label="Map showing the Pietermaritzburg and Johannesburg offices"></div>
+</section>
 
   <footer>
     <p>&copy; 2026 Gift of the Givers Foundation. NPO 032-031 | PBO 930018993.</p>
     <p><a href="contact.html">Contact us</a> | <a href="enquiry.html">Volunteer or Sponsor</a></p>
   </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/forms.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/map.js"></script>
 </body>
 </html>
+
