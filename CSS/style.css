@@ -465,3 +465,76 @@ footer a {
     transition-duration: 0.01ms !important;
   }
 }
+/* ===========================================================
+   Part 3 updates (changes made from Part 2 feedback)
+   =========================================================== */
+
+/* Default styles: consistent base for every page */
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Keyboard focus styles for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 2px;
+}
+
+/* Responsive images: scale down, never overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Tablet: stop the menu getting squeezed */
+@media (max-width: 900px) {
+  nav ul {
+    gap: 14px;
+  }
+
+  .hero {
+    padding: 70px 20px;
+  }
+}
+
+/* Mobile: bigger tap target for the menu button */
+@media (max-width: 720px) {
+  .nav-toggle {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+/* Responsive hero image: smaller file on phones */
+@media (max-width: 720px) {
+  .hero {
+    background-image: linear-gradient(rgba(31,56,100,0.75), rgba(31,56,100,0.75)), url('../images/hero-small.jpg');
+  }
+}
