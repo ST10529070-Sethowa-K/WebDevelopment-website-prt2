@@ -538,3 +538,26 @@ img {
     background-image: linear-gradient(rgba(31,56,100,0.75), rgba(31,56,100,0.75)), url('../images/hero-small.jpg');
   }
 }
+/* Enquiry response box */
+.response {
+  max-width: 600px;
+  margin: 24px auto 0;
+  padding: 20px;
+  background: #fff;
+  border-left: 5px solid var(--orange);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.response[hidden] {
+  display: none;
+}
+
+.response h3 {
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+
+.response ul {
+  margin-left: 1.2rem;
+}

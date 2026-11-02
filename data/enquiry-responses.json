@@ -1,0 +1,28 @@
+{
+  "volunteer": {
+    "title": "Volunteer enquiry received",
+    "message": "Thank you for offering your time. Volunteering costs you nothing.",
+    "details": [
+      "Availability: placements open throughout the year, depending on current projects.",
+      "A volunteer coordinator will contact you within 3 working days.",
+      "Please have your ID and emergency contact details ready."
+    ]
+  },
+  "sponsor": {
+    "title": "Sponsor enquiry received",
+    "message": "Thank you for considering a partnership with us. Sample sponsorship packages:",
+    "details": [
+      "Community Partner: from R5 000 per year",
+      "Project Sponsor: from R25 000 per project",
+      "Corporate Partner: tailored, from R100 000 per year",
+      "Availability: sponsors are matched to active projects within 5 working days."
+    ]
+  },
+  "other": {
+    "title": "Enquiry received",
+    "message": "Thank you for contacting us.",
+    "details": [
+      "Our team replies to general enquiries within 5 working days."
+    ]
+  }
+}

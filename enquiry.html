@@ -35,22 +35,23 @@
         Interested in getting involved? Let us know whether you'd like to volunteer your time or partner with us as a sponsor, and our team will be in touch.
       </p>
 
-      <form id="enquiry-form" data-validate novalidate>
+      <form id="enquiry-form" novalidate>
         <div>
           <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" name="fullname" required>
-          <div class="error" id="fullname-error"></div>
+          <input type="text" id="fullname" name="fullname" required minlength="2" maxlength="60" autocomplete="name">
+          <div class="error" id="fullname-error" aria-live="polite"></div>
         </div>
 
         <div>
           <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required>
-          <div class="error" id="email-error"></div>
+          <input type="email" id="email" name="email" required autocomplete="email">
+          <div class="error" id="email-error" aria-live="polite"></div>
         </div>
 
         <div>
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone">
+          <label for="phone">Phone Number (optional)</label>
+          <input type="tel" id="phone" name="phone" maxlength="16" placeholder="e.g. 082 123 4567" autocomplete="tel">
+          <div class="error" id="phone-error" aria-live="polite"></div>
         </div>
 
         <div>
@@ -61,18 +62,20 @@
             <option value="sponsor">Becoming a Sponsor</option>
             <option value="other">Other Enquiry</option>
           </select>
-          <div class="error" id="enquiry-type-error"></div>
+          <div class="error" id="enquiry-type-error" aria-live="polite"></div>
         </div>
 
         <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required placeholder="Tell us a bit about how you'd like to help..."></textarea>
-          <div class="error" id="message-error"></div>
+          <label for="message">Message (10 to 500 characters)</label>
+          <textarea id="message" name="message" required minlength="10" maxlength="500" placeholder="Tell us a bit about how you'd like to help..."></textarea>
+          <div class="error" id="message-error" aria-live="polite"></div>
         </div>
 
         <button type="submit" class="btn">Submit Enquiry</button>
-        <p id="form-status"></p>
+        <p id="form-status" aria-live="polite"></p>
       </form>
+
+      <div id="enquiry-response" class="response" hidden></div>
     </section>
   </main>
 
@@ -84,3 +87,4 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+<script src="js/forms.js"></script>
